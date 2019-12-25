@@ -1,0 +1,323 @@
+version: '2'
+
+networks:
+  insurance:
+  
+services:
+  orderer1.insurance:
+    container_name: orderer1.insurance
+    extends:
+      file: base.yaml
+      service: orderer
+    volumes:
+      - ./var/hyperledger/orderer1:/var/hyperledger/production
+      - ./orderer/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/insurance/orderers/orderer1.insurance/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/insurance/orderers/orderer1.insurance/tls/:/var/hyperledger/orderer/tls
+    ports:
+      - 7050:7050
+    networks:
+      - insurance
+
+  orderer2.insurance:
+    container_name: orderer2.insurance
+    extends:
+      file: base.yaml
+      service: orderer
+    volumes:
+      - ./var/hyperledger/orderer2:/var/hyperledger/production
+      - ./orderer/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/insurance/orderers/orderer2.insurance/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/insurance/orderers/orderer2.insurance/tls/:/var/hyperledger/orderer/tls
+    ports:
+      - 8050:7050
+    networks:
+      - insurance
+
+  orderer3.insurance:
+    container_name: orderer3.insurance
+    extends:
+      file: base.yaml
+      service: orderer
+    volumes:
+      - ./var/hyperledger/orderer3:/var/hyperledger/production
+      - ./orderer/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/insurance/orderers/orderer3.insurance/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/insurance/orderers/orderer3.insurance/tls/:/var/hyperledger/orderer/tls
+    ports:
+      - 9050:7050
+    networks:
+      - insurance
+
+  orderer4.insurance:
+    container_name: orderer4.insurance
+    extends:
+      file: base.yaml
+      service: orderer
+    volumes:
+      - ./var/hyperledger/orderer4:/var/hyperledger/production
+      - ./orderer/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/insurance/orderers/orderer4.insurance/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/insurance/orderers/orderer4.insurance/tls/:/var/hyperledger/orderer/tls
+    ports:
+      - 10050:7050
+    networks:
+      - insurance
+
+  orderer5.insurance:
+    container_name: orderer5.insurance
+    extends:
+      file: base.yaml
+      service: orderer
+    volumes:
+      - ./var/hyperledger/orderer5:/var/hyperledger/production
+      - ./orderer/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/insurance/orderers/orderer5.insurance/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/insurance/orderers/orderer5.insurance/tls/:/var/hyperledger/orderer/tls
+    ports:
+      - 11050:7050
+    networks:
+      - insurance
+
+  peer0.bajaj.com:
+    container_name: peer0.bajaj.com
+    extends:
+      file: base.yaml
+      service: peer
+    environment:
+      - CORE_PEER_ID=peer0.bajaj.com
+      - CORE_PEER_ADDRESS=peer0.bajaj.com:7051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.bajaj.com:7051
+      - CORE_PEER_LOCALMSPID=BajajMSP
+#      - CORE_OPERATIONS_LISTENADDRESS=peer0.org1:9443
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbBajaj:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=admin
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=adminpw
+    volumes:
+      - ./var/hyperledger/peer0.bajaj.com:/var/hyperledger/production
+      - ./crypto-config/peerOrganizations/bajaj.com/peers/peer0.bajaj.com/msp:/etc/hyperledger/fabric/msp
+      - ./crypto-config/peerOrganizations/bajaj.com/peers/peer0.bajaj.com/tls:/etc/hyperledger/fabric/tls
+    ports:
+      - 7051:7051
+      - 7053:7053
+    depends_on:
+      - orderer1.insurance
+      - orderer2.insurance
+      - orderer3.insurance
+      - orderer4.insurance
+      - orderer5.insurance
+    networks:
+      - insurance
+
+  peer1.bajaj.com:
+    container_name: peer1.bajaj.com
+    extends:
+      file: base.yaml
+      service: peer
+    environment:
+      - CORE_PEER_ID=peer1.bajaj.com
+      - CORE_PEER_ADDRESS=peer1.bajaj.com:7051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.bajaj.com:7051
+ #     - CORE_OPERATIONS_LISTENADDRESS=peer1.org1:9443
+      - CORE_PEER_LOCALMSPID=BajajMSP
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbBajaj:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=admin
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=adminpw
+    volumes:
+      - ./var/hyperledger/peer1.bajaj.com:/var/hyperledger/production
+      - ./crypto-config/peerOrganizations/bajaj.com/peers/peer1.bajaj.com/msp:/etc/hyperledger/fabric/msp
+      - ./crypto-config/peerOrganizations/bajaj.com/peers/peer1.bajaj.com/tls:/etc/hyperledger/fabric/tls
+    ports:
+      - 7056:7051
+      - 7058:7053
+    depends_on:
+      - orderer1.insurance
+      - orderer2.insurance
+      - orderer3.insurance
+      - orderer4.insurance
+      - orderer5.insurance
+    networks:
+      - insurance
+
+  peer0.bajajallianz.com:
+    container_name: peer0.bajajallianz.com
+    extends:
+      file: base.yaml
+      service: peer
+    environment:
+      - CORE_PEER_ID=peer0.bajajallianz.com
+      - CORE_PEER_ADDRESS=peer0.bajajallianz.com:7051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.bajajallianz.com:7051
+#      - CORE_OPERATIONS_LISTENADDRESS=peer0.org2:9443
+      - CORE_PEER_LOCALMSPID=BajajAllianzMSP
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbBajajAllianz:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=admin
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=adminpw
+    volumes:
+      - ./var/hyperledger/peer0.bajajallianz.com:/var/hyperledger/production
+      - ./crypto-config/peerOrganizations/bajajallianz.com/peers/peer0.bajajallianz.com/msp:/etc/hyperledger/fabric/msp
+      - ./crypto-config/peerOrganizations/bajajallianz.com/peers/peer0.bajajallianz.com/tls:/etc/hyperledger/fabric/tls
+    ports:
+      - 8051:7051
+      - 8053:7053
+    depends_on:
+      - orderer1.insurance
+      - orderer2.insurance
+      - orderer3.insurance
+      - orderer4.insurance
+      - orderer5.insurance
+    networks:
+      - insurance
+  
+  peer1.bajajallianz.com:
+    container_name: peer1.bajajallianz.com
+    extends:
+      file: base.yaml
+      service: peer
+    environment:
+      - CORE_PEER_ID=peer1.bajajallianz.com
+      - CORE_PEER_ADDRESS=peer1.bajajallianz.com:7051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.bajajallianz.com:7051
+#      - CORE_OPERATIONS_LISTENADDRESS=peer1.org2:9443
+      - CORE_PEER_LOCALMSPID=BajajAllianzMSP
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbBajajAllianz:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=admin
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=adminpw
+    volumes:
+      - ./var/hyperledger/peer1.bajajallianz.com:/var/hyperledger/production
+      - ./crypto-config/peerOrganizations/bajajallianz.com/peers/peer1.bajajallianz.com/msp:/etc/hyperledger/fabric/msp
+      - ./crypto-config/peerOrganizations/bajajallianz.com/peers/peer1.bajajallianz.com/tls:/etc/hyperledger/fabric/tls
+    ports:
+      - 8056:7051
+      - 8058:7053
+    depends_on:
+      - orderer1.insurance
+      - orderer2.insurance
+      - orderer3.insurance
+      - orderer4.insurance
+      - orderer5.insurance
+    networks:
+      - insurance
+
+  
+  couchdbBajaj:
+    container_name: couchdbBajaj
+    image: hyperledger/fabric-couchdb:latest
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=adminpw
+    ports:
+      - 7055:5984
+    volumes:
+      - ./var/hyperledger/couchdbBajaj:/opt/couchdb/data
+    networks:
+      - insurance
+  
+  couchdbBajajAllianz:
+    container_name: couchdbBajajAllianz
+    image: hyperledger/fabric-couchdb:latest
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=adminpw
+    ports:
+      - 8055:5984
+    volumes:
+      - ./var/hyperledger/couchdbBajajAllianz:/opt/couchdb/data
+    networks:
+      - insurance
+
+  
+  ca.bajaj.com:
+    image: hyperledger/fabric-ca:latest
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca.bajaj.com
+      - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.bajaj.com-cert.pem
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/864c4fa9eaf78c5748676a18fe80e1ec956a4a00af588cb8b2f1941902b30057_sk
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.bajaj.com-cert.pem
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/864c4fa9eaf78c5748676a18fe80e1ec956a4a00af588cb8b2f1941902b30057_sk
+    ports:
+      - 7054:7054
+    command: sh -c 'fabric-ca-server start -b admin:adminpw'
+    volumes:
+      - ./crypto-config/peerOrganizations/bajaj.com/ca/:/etc/hyperledger/fabric-ca-server-config
+    container_name: ca.bajaj.com
+    
+  ca.bajajallianz.com:
+    image: hyperledger/fabric-ca:latest
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca.bajajallianz.com
+      - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.bajajallianz.com-cert.pem
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/ed5235af938e911a995c0439c738c98686bfaa68de90c87c8ce089a78e2d036e_sk
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.bajajallianz.com-cert.pem
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/ed5235af938e911a995c0439c738c98686bfaa68de90c87c8ce089a78e2d036e_sk
+    ports:
+      - 8054:7054
+    command: sh -c 'fabric-ca-server start -b admin:adminpw'
+    volumes:
+      - ./crypto-config/peerOrganizations/bajajallianz.com/ca/:/etc/hyperledger/fabric-ca-server-config
+    container_name: ca.bajajallianz.com
+  
+  
+  cli.bajaj.com:
+    extends:
+      file: base.yaml
+      service: cli
+    container_name: cli.bajaj.com
+    environment:
+      - CORE_PEER_ID=cli.bajaj.com
+      - CORE_PEER_ADDRESS=peer0.bajaj.com:7051
+      - CORE_PEER_LOCALMSPID=BajajMSP
+      - CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/bajaj.com/peers/peer0.bajaj.com/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/bajaj.com/peers/peer0.bajaj.com/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/bajaj.com/peers/peer0.bajaj.com/tls/ca.crt
+    volumes:
+      - ./crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
+      - ./channels:/opt/gopath/src/github.com/hyperledger/fabric/peer/channels/
+    depends_on:
+      - orderer1.insurance
+      - orderer2.insurance
+      - orderer3.insurance
+      - orderer4.insurance
+      - orderer5.insurance
+      - peer0.bajaj.com
+    networks:
+      - insurance
+
+  cli.bajajallianz.com:
+    extends:
+      file: base.yaml
+      service: cli
+    container_name: cli.bajajallianz.com
+    environment:
+      - CORE_PEER_ID=cli.bajajallianz.com
+      - CORE_PEER_ADDRESS=peer0.bajajallianz.com:7051
+      - CORE_PEER_LOCALMSPID=BajajAllianzMSP
+      - CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/bajajallianz.com/peers/peer0.bajajallianz.com/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/bajajallianz.com/peers/peer0.bajajallianz.com/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/bajajallianz.com/peers/peer0.bajajallianz.com/tls/ca.crt
+    volumes:
+      - ./crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
+      - ./channels:/opt/gopath/src/github.com/hyperledger/fabric/peer/channels/
+    depends_on:
+      - orderer1.insurance
+      - orderer2.insurance
+      - orderer3.insurance
+      - orderer4.insurance
+      - orderer5.insurance
+      - peer0.bajajallianz.com
+    networks:
+      - insurance
+
+  
