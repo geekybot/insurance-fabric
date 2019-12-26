@@ -1,0 +1,151 @@
+---
+
+name: "balance-transfer"
+x-type: "hlfv1"
+description: "Balance Transfer Network"
+version: "1.0"
+channels:
+  insurancechannel:
+    orderers:
+      - orderer1.insurance
+      - orderer2.insurance
+      - orderer3.insurance
+      - orderer4.insurance
+      - orderer5.insurance
+    
+    peers:
+      peer0.bajaj.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+
+      peer1.bajaj.com:
+        endorsingPeer: false
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: false
+
+      peer0.bajajallianz.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+
+      peer1.bajajallianz.com:
+        endorsingPeer: false
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: false
+    chaincodes:
+      - mycc:v0
+
+organizations:
+  Bajaj:
+    mspid: BajajMSP
+
+    peers:
+      - peer0.bajaj.com
+      - peer1.bajaj.com
+    certificateAuthorities:
+      - ca-bajaj
+    adminPrivateKey:
+      path: artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+    signedCert:
+      path: artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem
+  BajajAllianz:
+    mspid: BajajAllianzMSP
+    peers:
+      - peer0.bajajallianz.com
+      - peer1.bajajallianz.com
+    certificateAuthorities:
+      - ca-bajajallianz
+    adminPrivateKey:
+      path: artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/keystore/699f17233fa69d22a08631d39e097d5111876a777e4f5a2787f76ade1f70c070_sk
+    signedCert:
+      path: artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/signcerts/Admin@bajajallianz.com-cert.pem
+orderers:
+  orderer1.insurance:
+    url: grpcs://localhost:7050
+    grpcOptions:
+      ssl-target-name-override: orderer1.insurance
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/ordererOrganizations/insurance/orderers/orderer1.insurance/tls/ca.crt
+  orderer2.insurance:
+    url: grpcs://localhost:8050
+    grpcOptions:
+      ssl-target-name-override: orderer2.insurance
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/ordererOrganizations/insurance/orderers/orderer2.insurance/tls/ca.crt
+  orderer3.insurance:
+    url: grpcs://localhost:9050
+    grpcOptions:
+      ssl-target-name-override: orderer3.insurance
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/ordererOrganizations/insurance/orderers/orderer3.insurance/tls/ca.crt
+  orderer4.insurance:
+    url: grpcs://localhost:10050
+    grpcOptions:
+      ssl-target-name-override: orderer4.insurance
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/ordererOrganizations/insurance/orderers/orderer4.insurance/tls/ca.crt
+  orderer5.insurance:
+    url: grpcs://localhost:11050
+    grpcOptions:
+      ssl-target-name-override: orderer5.insurance
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/ordererOrganizations/insurance/orderers/orderer5.insurance/tls/ca.crt
+
+
+peers:
+  peer0.bajaj.com:
+    url: grpcs://localhost:7051
+    grpcOptions:
+      ssl-target-name-override: peer0.bajaj.com
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/bajaj.com/peers/peer0.bajaj.com/tls/ca.crt
+
+  peer1.bajaj.com:
+    url: grpcs://localhost:7056
+    grpcOptions:
+      ssl-target-name-override: peer1.bajaj.com
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/bajaj.com/peers/peer1.bajaj.com/tls/ca.crt
+
+  peer0.bajajallianz.com:
+    url: grpcs://localhost:8051
+    grpcOptions:
+      ssl-target-name-override: peer0.bajajallianz.com
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/peers/peer0.bajajallianz.com/tls/ca.crt
+
+  peer1.bajajallianz.com:
+    url: grpcs://localhost:8056
+    eventUrl: grpcs://localhost:8058
+    grpcOptions:
+      ssl-target-name-override: peer1.bajajallianz.com
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/peers/peer1.bajajallianz.com/tls/ca.crt
+
+certificateAuthorities:
+  ca-bajaj:
+    url: https://localhost:7054
+    httpOptions:
+      verify: false
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/bajaj.com/ca/ca.bajaj.com-cert.pem
+    registrar:
+      - enrollId: admin
+        enrollSecret: adminpw
+    caName: ca.bajaj.com
+
+  ca-bajajallianz:
+    url: https://localhost:8054
+    httpOptions:
+      verify: false
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/ca/ca.bajajallianz.com-cert.pem
+    registrar:
+      - enrollId: admin
+        enrollSecret: adminpw
+    caName: ca.bajajallianz.com
