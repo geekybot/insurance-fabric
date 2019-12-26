@@ -1,0 +1,12 @@
+curl -X POST \
+  http://localhost:4000/channels/insurancechannel/chaincodes/carinsurance \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 3a0e4d86-879f-421a-a711-519d3995e663' \
+  -H 'cache-control: no-cache' \
+  -d '{
+    "fcn": "addInsurance",
+    "args": {
+        "name": "Utpal",
+        "mobile": "9046384611"
+    }
+}'
