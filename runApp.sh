@@ -29,9 +29,9 @@ function dkrm(){
 
 function restartNetwork() {
 	echo
-
+   sudo rm -rf var
   #teardown the network and clean the containers and intermediate images
-	docker-compose -f ./artifacts/docker-compose.yaml down
+	docker-compose -f ./network/docker-compose.yaml down
 	dkcl
 	dkrm
 
@@ -39,7 +39,7 @@ function restartNetwork() {
 	rm -rf ./fabric-client-kv-org*
 
 	#Start the network
-	docker-compose -f ./artifacts/docker-compose.yaml up -d
+	docker-compose -f ./network/docker-compose.yaml up -d
 	echo
 }
 
@@ -56,7 +56,7 @@ function installNodeModules() {
 
 
 restartNetwork
-
+cd api
 installNodeModules
 
 PORT=4000 node app
