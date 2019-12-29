@@ -1,0 +1,8 @@
+"insuranceRegistration"
+"userRegistration"
+"buyInsurance"
+"getInsuranceByUserID"
+"generateInvoice"
+"getInvoiceByInvoiceID"
+"getInvoiceByUserID"
+"getInsuranceByUserID"
