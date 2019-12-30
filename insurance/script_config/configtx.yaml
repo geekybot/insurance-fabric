@@ -1,0 +1,177 @@
+Organizations:
+    - &OrdererOrg
+        Name: OrdererOrg
+        ID: OrdererMSP
+        MSPDir: crypto-config/ordererOrganizations/insurance/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('OrdererMSP.member')"
+            Writers:
+                Type: Signature
+                Rule: "OR('OrdererMSP.member')"
+            Admins:
+                Type: Signature
+                Rule: "OR('OrdererMSP.admin')"
+
+    - &Bajaj
+        Name: BajajMSP
+        ID: BajajMSP
+        MSPDir: crypto-config/peerOrganizations/bajaj.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('BajajMSP.admin', 'BajajMSP.peer', 'BajajMSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('BajajMSP.admin', 'BajajMSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('BajajMSP.admin')"
+        AnchorPeers:
+            - Host: peer0.bajaj.com
+              Port: 7051
+
+    - &BajajAllianz
+        Name: BajajAllianzMSP
+        ID: BajajAllianzMSP
+        MSPDir: crypto-config/peerOrganizations/bajajallianz.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('BajajAllianzMSP.admin', 'BajajAllianzMSP.peer', 'BajajAllianzMSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('BajajAllianzMSP.admin', 'BajajAllianzMSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('BajajAllianzMSP.admin')"
+
+        AnchorPeers:
+            - Host: peer0.bajajallianz.com
+              Port: 7051
+    
+  
+
+Capabilities:
+    Channel: &ChannelCapabilities
+        V1_4_3: true
+        V1_3: false
+    Orderer: &OrdererCapabilities
+        V1_4_2: true
+        V1_1: false
+    Application: &ApplicationCapabilities
+        V1_4_2: true
+        V1_3: false
+        V1_2: false
+        V1_1: false
+
+Application: &ApplicationDefaults
+
+    Organizations:
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+
+    Capabilities:
+        <<: *ApplicationCapabilities
+
+Orderer: &OrdererDefaults
+    OrdererType: etcdraft
+    Addresses:
+        - orderer1.insurance:7050
+        - orderer2.insurance:7050
+        - orderer3.insurance:7050
+        - orderer4.insurance:7050
+        - orderer5.insurance:7050
+
+    BatchTimeout: 2s
+    BatchSize:
+        MaxMessageCount: 10
+        AbsoluteMaxBytes: 99 MB
+        PreferredMaxBytes: 512 KB
+    EtcdRaft:
+        Consenters:
+            - Host: orderer1.insurance
+              Port: 7050
+              ClientTLSCert: crypto-config/ordererOrganizations/insurance/orderers/orderer1.insurance/tls/server.crt
+              ServerTLSCert: crypto-config/ordererOrganizations/insurance/orderers/orderer1.insurance/tls/server.crt
+            - Host: orderer2.insurance
+              Port: 7050
+              ClientTLSCert: crypto-config/ordererOrganizations/insurance/orderers/orderer2.insurance/tls/server.crt
+              ServerTLSCert: crypto-config/ordererOrganizations/insurance/orderers/orderer2.insurance/tls/server.crt
+            - Host: orderer3.insurance
+              Port: 7050
+              ClientTLSCert: crypto-config/ordererOrganizations/insurance/orderers/orderer3.insurance/tls/server.crt
+              ServerTLSCert: crypto-config/ordererOrganizations/insurance/orderers/orderer3.insurance/tls/server.crt
+            - Host: orderer4.insurance
+              Port: 7050
+              ClientTLSCert: crypto-config/ordererOrganizations/insurance/orderers/orderer4.insurance/tls/server.crt
+              ServerTLSCert: crypto-config/ordererOrganizations/insurance/orderers/orderer4.insurance/tls/server.crt
+            - Host: orderer5.insurance
+              Port: 7050
+              ClientTLSCert: crypto-config/ordererOrganizations/insurance/orderers/orderer5.insurance/tls/server.crt
+              ServerTLSCert: crypto-config/ordererOrganizations/insurance/orderers/orderer5.insurance/tls/server.crt
+    Organizations:
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+        BlockValidation:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+
+Channel: &ChannelDefaults
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+
+    Capabilities:
+        <<: *ChannelCapabilities
+
+Profiles:
+    InsuranceOrdererGenesis:
+        <<: *ChannelDefaults
+        Orderer:
+            <<: *OrdererDefaults
+            Organizations:
+                - *OrdererOrg
+            Capabilities:
+                <<: *OrdererCapabilities
+        Consortiums:
+            Insurance:
+                Organizations:
+                    - *Bajaj
+                    - *BajajAllianz
+                   
+
+    InsuranceCommon:
+        Consortium: Insurance
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *Bajaj
+                - *BajajAllianz
+             
+            Capabilities:
+                <<: *ApplicationCapabilities
