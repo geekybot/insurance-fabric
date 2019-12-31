@@ -51,8 +51,8 @@ type User struct {
 	VehicleModel        string   `json:"vehicleModle"`
 	ChassisNo           string   `json:"chassisNo"`
 	DateOfRegistration  string   `json:"dateOfRegistration"`
-	InsuranceID         string[] `json:"insuranceID"`
-	InvoiceID           string[] `json:"invoiceID"`
+	InsuranceID      [100]string `json:"insuranceID"`
+	InvoiceID       [1000]string `json:"invoiceID"`
 	Payble              int      `json:"payble"`
 	Paid                int      `json:"paid"`
 	Bank1               string   `json:"bank1"`
