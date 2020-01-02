@@ -1,4 +1,9 @@
-#cd network
+# cd insurance
+# Create channel
+docker-compose up -d
+sleep 10
+
+docker exec cli.bajaj.com bash -c 'peer channel create -o orderer1.insurance:7050 -c insurancecommon -f ./channels/insurancecommon.tx --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/insurance/orderers/orderer1.insurance/msp/tlscacerts/tlsca.insurance-cert.pem'
 # #joining the peers to that channel
 docker exec cli.bajaj.com bash -c 'peer channel join -o orderer1.insurance:7050 -b insurancecommon.block --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/insurance/orderers/orderer1.insurance/msp/tlscacerts/tlsca.insurance-cert.pem'
 docker exec cli.bajajallianz.com bash -c 'peer channel join -o orderer1.insurance:7050 -b insurancecommon.block --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/insurance/orderers/orderer1.insurance/msp/tlscacerts/tlsca.insurance-cert.pem'

@@ -1,4 +1,4 @@
-cd network
+cd  insurance
 #installing the chaincode on all the orgs
 docker exec cli.bajaj.com bash -c 'peer chaincode install -o orderer1.insurance:7050 -p consent -n consent -v 1.0 --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/insurance/orderers/orderer1.insurance/msp/tlscacerts/tlsca.insurance-cert.pem'
 docker exec cli.bajajallianz.com bash -c 'peer chaincode install -o orderer1.insurance:7050 -p consent -n consent -v 1.0 --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/insurance/orderers/orderer1.insurance/msp/tlscacerts/tlsca.insurance-cert.pem'
