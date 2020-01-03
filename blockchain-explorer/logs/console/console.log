@@ -1,0 +1,1196 @@
+[2020-01-04T00:00:01.460] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:00:01.484] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:00:01.524] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:00:01.524] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:00:01.524] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:00:01.524] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:00:01.524] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:00:09.926] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:00:09.926] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:00:10.912] [INFO] Platform -  client_configs.name  insurance-network  client_configs.profile  ./connection-profile/insurance-network.json
+[2020-01-04T00:00:10.912] [INFO] Platform - FabricUtils.createFabricClient 
+[2020-01-04T00:00:10.914] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:00:10.915] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:00:10.915] [INFO] FabricGateway - ./artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:00:10.915] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:00:11.240] [ERROR] FabricClient - { Error: ENOENT: no such file or directory, open '/home/i0046/Videos/insurance-fabric/blockchain-explorer/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.readFileSync (fs.js:551:33)
+    at readFileSync (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:442:20)
+    at getPEMfromConfig (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:424:13)
+    at NetworkConfig_1_0.getOrganization (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:274:18)
+    at NetworkConfig_1_0._getOrganizationForPeer (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:382:31)
+    at NetworkConfig_1_0._addPeersToChannel (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:365:29)
+    at NetworkConfig_1_0.getChannel (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:160:10)
+    at Client.getChannel (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/Client.js:343:36)
+    at FabricClient.initialize (/home/i0046/Videos/insurance-fabric/blockchain-explorer/app/platform/fabric/FabricClient.js:92:42)
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/i0046/Videos/insurance-fabric/blockchain-explorer/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk' }
+[2020-01-04T00:00:11.282] [ERROR] FabricClient - Failed to initialize new channel:  insurancecommon
+[2020-01-04T00:00:11.284] [ERROR] main - <<<<<<<<<<<<<<<<<<<<<<<<<< Explorer Error >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:00:11.284] [ERROR] main - Error :  [ 'Invalid platform configuration, Please check the log' ]
+[2020-01-04T00:00:31.479] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:00:31.516] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:00:31.588] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:00:31.589] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:00:31.589] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:00:31.589] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:00:31.589] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:01:01.505] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:01:01.553] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:01:01.599] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:01:01.599] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:01:01.599] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:01:01.599] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:01:01.600] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:01:31.543] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:01:31.590] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:01:31.641] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:01:31.641] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:01:31.641] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:01:31.641] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:01:31.642] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:02:01.574] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:02:01.597] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:02:01.667] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:02:01.667] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:02:01.667] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:02:01.668] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:02:01.668] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:02:31.589] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:02:31.600] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:02:31.640] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:02:31.640] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:02:31.641] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:02:31.641] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:02:31.641] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:02:36.604] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:02:36.604] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:02:37.573] [INFO] Platform -  client_configs.name  insurance-network  client_configs.profile  ./connection-profile/insurance-network.json
+[2020-01-04T00:02:37.573] [INFO] Platform - FabricUtils.createFabricClient 
+[2020-01-04T00:02:37.574] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:02:37.574] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:02:37.575] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:02:37.575] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:02:37.963] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:02:37.965] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:02:37.965] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:02:37.966] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:02:37.967] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:02:37.998] [INFO] Platform - FabricUtils.createDetachClient 
+[2020-01-04T00:02:38.000] [INFO] Platform - initializeListener, client_name, client  insurance-network { name: 'insurance-network',
+  profile: './connection-profile/insurance-network.json',
+  enableAuthentication: false }
+[2020-01-04T00:02:38.011] [ERROR] main - <<<<<<<<<<<<<<<<<<<<<<<<<< Explorer Error >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:02:38.011] [ERROR] main - { Error: listen EADDRINUSE :::8080
+    at Server.setupListenHandle [as _listen2] (net.js:1360:14)
+    at listenInCluster (net.js:1401:12)
+    at Server.listen (net.js:1485:7)
+    at startExplorer (/home/i0046/Videos/insurance-fabric/blockchain-explorer/main.js:120:9)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+  errno: 'EADDRINUSE',
+  code: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 8080 }
+[2020-01-04T00:02:38.186] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:02:38.186] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:02:39.244] [INFO] SyncPlatform - Sync process is started for the network : [first-network] and client : [insurance-network]
+[2020-01-04T00:02:39.247] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:02:39.248] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:02:39.248] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:02:39.248] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:02:39.755] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:02:39.756] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:02:39.756] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:02:39.757] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:02:39.757] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:02:39.798] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:02:39.839] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:02:39.840] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:02:39.840] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:02:39.840] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:02:39.840] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:02:39.890] [INFO] Sync - Synchronizer pid is 3766
+[2020-01-04T00:02:39.907] [INFO] SyncServices - block_row.blocknum  3
+[2020-01-04T00:02:40.025] [INFO] Sync - <<<<<<<<<<<<<<<<<<<<<<<<<< Closing client processor >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:02:40.033] [ERROR] FabricEvent - Block Event Error: ChannelEventHub has been shutdown
+[2020-01-04T00:03:01.598] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:03:01.671] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:03:01.714] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:03:01.715] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:03:01.715] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:03:01.715] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:03:01.715] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:03:31.666] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:03:31.695] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:03:31.743] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:03:31.743] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:03:31.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:03:31.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:03:31.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:04:01.691] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:04:01.698] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:04:01.730] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:04:01.730] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:04:01.730] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:04:01.730] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:04:01.730] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:04:26.899] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:04:26.900] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:04:27.858] [INFO] Platform -  client_configs.name  insurance-network  client_configs.profile  ./connection-profile/insurance-network.json
+[2020-01-04T00:04:27.858] [INFO] Platform - FabricUtils.createFabricClient 
+[2020-01-04T00:04:27.859] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:04:27.860] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:04:27.860] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:04:27.860] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:04:28.243] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:04:28.244] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:04:28.244] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:04:28.245] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:04:28.245] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:04:28.278] [INFO] Platform - FabricUtils.createDetachClient 
+[2020-01-04T00:04:28.280] [INFO] Platform - initializeListener, client_name, client  insurance-network { name: 'insurance-network',
+  profile: './connection-profile/insurance-network.json',
+  enableAuthentication: false }
+[2020-01-04T00:04:28.291] [ERROR] main - <<<<<<<<<<<<<<<<<<<<<<<<<< Explorer Error >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:04:28.291] [ERROR] main - { Error: listen EADDRINUSE :::8080
+    at Server.setupListenHandle [as _listen2] (net.js:1360:14)
+    at listenInCluster (net.js:1401:12)
+    at Server.listen (net.js:1485:7)
+    at startExplorer (/home/i0046/Videos/insurance-fabric/blockchain-explorer/main.js:120:9)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+  errno: 'EADDRINUSE',
+  code: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 8080 }
+[2020-01-04T00:04:28.461] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:04:28.461] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:04:29.562] [INFO] SyncPlatform - Sync process is started for the network : [first-network] and client : [insurance-network]
+[2020-01-04T00:04:29.564] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:04:29.565] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:04:29.565] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:04:29.565] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:04:29.989] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:04:29.990] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:04:29.991] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:04:29.992] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:04:29.992] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:04:30.031] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:04:30.076] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:04:30.076] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:04:30.076] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:04:30.077] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:04:30.077] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:04:30.146] [INFO] Sync - Synchronizer pid is 4059
+[2020-01-04T00:04:30.164] [INFO] SyncServices - block_row.blocknum  3
+[2020-01-04T00:04:30.305] [INFO] Sync - <<<<<<<<<<<<<<<<<<<<<<<<<< Closing client processor >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:04:30.327] [ERROR] FabricEvent - Block Event Error: ChannelEventHub has been shutdown
+[2020-01-04T00:04:31.697] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:04:31.708] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:04:31.750] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:04:31.750] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:04:31.751] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:04:31.751] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:04:31.751] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:05:01.704] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:05:01.711] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:05:01.746] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:05:01.746] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:05:01.747] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:05:01.747] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:05:01.747] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:05:31.709] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:05:31.732] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:05:31.768] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:05:31.768] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:05:31.768] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:05:31.768] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:05:31.768] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:06:01.727] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:06:01.734] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:06:01.768] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:06:01.768] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:06:01.768] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:06:01.768] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:06:01.769] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:06:31.731] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:06:31.741] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:06:31.772] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:06:31.772] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:06:31.772] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:06:31.773] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:06:31.773] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:07:01.737] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:07:01.744] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:07:01.781] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:07:01.781] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:07:01.781] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:07:01.781] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:07:01.782] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:07:31.742] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:07:31.750] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:07:31.785] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:07:31.786] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:07:31.786] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:07:31.786] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:07:31.786] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:08:01.748] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:08:01.760] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:08:01.839] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:08:01.839] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:08:01.839] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:08:01.839] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:08:01.840] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:08:31.755] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:08:31.764] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:08:31.833] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:08:31.833] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:08:31.833] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:08:31.834] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:08:31.834] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:09:01.760] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:09:01.777] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:09:01.831] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:09:01.832] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:09:01.832] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:09:01.832] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:09:01.832] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:09:31.773] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:09:31.782] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:09:31.847] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:09:31.848] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:09:31.848] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:09:31.848] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:09:31.848] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:09:54.282] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:09:54.282] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:09:55.214] [INFO] Platform -  client_configs.name  insurance-network  client_configs.profile  ./connection-profile/insurance-network.json
+[2020-01-04T00:09:55.214] [INFO] Platform - FabricUtils.createFabricClient 
+[2020-01-04T00:09:55.217] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:09:55.217] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:09:55.217] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:09:55.217] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:09:55.777] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:09:55.779] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:09:55.780] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:09:55.780] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:09:55.781] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:09:55.833] [INFO] Platform - FabricUtils.createDetachClient 
+[2020-01-04T00:09:55.836] [INFO] Platform - initializeListener, client_name, client  insurance-network { name: 'insurance-network',
+  profile: './connection-profile/insurance-network.json',
+  enableAuthentication: false }
+[2020-01-04T00:09:55.851] [ERROR] main - <<<<<<<<<<<<<<<<<<<<<<<<<< Explorer Error >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:09:55.851] [ERROR] main - { Error: listen EADDRINUSE :::8080
+    at Server.setupListenHandle [as _listen2] (net.js:1360:14)
+    at listenInCluster (net.js:1401:12)
+    at Server.listen (net.js:1485:7)
+    at startExplorer (/home/i0046/Videos/insurance-fabric/blockchain-explorer/main.js:120:9)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+  errno: 'EADDRINUSE',
+  code: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 8080 }
+[2020-01-04T00:09:56.079] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:09:56.079] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:09:57.649] [INFO] SyncPlatform - Sync process is started for the network : [first-network] and client : [insurance-network]
+[2020-01-04T00:09:57.654] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:09:57.655] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:09:57.655] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:09:57.655] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:09:58.007] [INFO] Sync - <<<<<<<<<<<<<<<<<<<<<<<<<< Closing client processor >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:09:58.118] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:09:58.119] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:09:58.119] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:09:58.120] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:09:58.120] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:09:58.168] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:09:58.186] [ERROR] Sync - <<<<<<<<<<<<<<<<<<<<<<<<<< Synchronizer Error >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:09:58.187] [ERROR] Sync - Error: Client was closed and is not queryable
+    at process.nextTick (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/pg/lib/client.js:535:25)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+[2020-01-04T00:09:58.187] [INFO] Sync - <<<<<<<<<<<<<<<<<<<<<<<<<< Closing client processor >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:10:01.778] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:10:01.787] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:10:01.826] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:10:01.827] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:10:01.827] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:10:01.827] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:10:01.827] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:10:31.784] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:10:31.791] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:10:31.826] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:10:31.826] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:10:31.827] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:10:31.827] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:10:31.827] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:10:57.469] [INFO] Sync - <<<<<<<<<<<<<<<<<<<<<<<<<< Closing client processor >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:10:57.475] [ERROR] FabricEvent - Block Event Error: ChannelEventHub has been shutdown
+[2020-01-04T00:11:11.588] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:11:11.588] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:11:12.412] [INFO] Platform -  client_configs.name  insurance-network  client_configs.profile  ./connection-profile/insurance-network.json
+[2020-01-04T00:11:12.412] [INFO] Platform - FabricUtils.createFabricClient 
+[2020-01-04T00:11:12.413] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:11:12.414] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:11:12.414] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:11:12.414] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:11:12.761] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:11:12.762] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:11:12.762] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:11:12.763] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:11:12.763] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:11:12.792] [INFO] Platform - FabricUtils.createDetachClient 
+[2020-01-04T00:11:12.794] [INFO] Platform - initializeListener, client_name, client  insurance-network { name: 'insurance-network',
+  profile: './connection-profile/insurance-network.json',
+  enableAuthentication: false }
+[2020-01-04T00:11:12.802] [INFO] main - Please open web browser to access ：http://localhost:8080/
+[2020-01-04T00:11:12.802] [INFO] main - pid is 5608
+[2020-01-04T00:11:12.949] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:11:12.949] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:11:13.836] [INFO] SyncPlatform - Sync process is started for the network : [first-network] and client : [insurance-network]
+[2020-01-04T00:11:13.839] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:11:13.839] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:11:13.840] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:11:13.840] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:11:14.183] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:11:14.184] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:11:14.184] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:11:14.185] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:11:14.185] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:11:14.219] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:11:14.253] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:11:14.253] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:11:14.253] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:11:14.253] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:11:14.254] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:11:14.300] [INFO] Sync - Synchronizer pid is 5628
+[2020-01-04T00:11:14.315] [INFO] SyncServices - block_row.blocknum  3
+[2020-01-04T00:11:20.859] [INFO] NetworkService - [ [ 'first-network', Map { 'insurance-network' => [Object] } ] ]
+[2020-01-04T00:11:21.025] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:11:21.025] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:11:21.026] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:11:21.026] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:11:21.027] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:11:21.090] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:11:21.090] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:11:21.091] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:11:21.091] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:11:21.091] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:11:24.420] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:11:24.421] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:11:24.421] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:11:24.422] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:11:24.422] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:11:24.483] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:11:24.484] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:11:24.484] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:11:24.484] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:11:24.484] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:11:44.295] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:11:44.353] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:11:44.406] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:11:44.407] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:11:44.407] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:11:44.408] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:11:44.408] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:12:14.338] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:12:14.389] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:12:14.466] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:12:14.466] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:12:14.466] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:12:14.467] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:12:14.467] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:12:21.466] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:12:21.466] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:12:21.467] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:12:21.467] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:12:21.468] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:12:21.536] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:12:21.536] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:12:21.537] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:12:21.537] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:12:21.539] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:12:44.371] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:12:44.378] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:12:44.428] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:12:44.429] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:12:44.429] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:12:44.430] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:12:44.430] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:13:14.375] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:13:14.407] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:13:14.482] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:13:14.482] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:13:14.482] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:13:14.482] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:13:14.483] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:13:21.481] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:13:21.482] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:13:21.482] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:13:21.483] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:13:21.483] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:13:21.546] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:13:21.547] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:13:21.547] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:13:21.547] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:13:21.547] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:13:44.397] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:13:44.427] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:13:44.538] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:13:44.538] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:13:44.538] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:13:44.538] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:13:44.539] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:14:14.418] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:14:14.455] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:14:14.579] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:14:14.580] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:14:14.581] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:14:14.581] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:14:14.582] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:14:21.519] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:14:21.520] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:14:21.520] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:14:21.521] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:14:21.522] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:14:21.598] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:14:21.599] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:14:21.599] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:14:21.599] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:14:21.600] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:14:44.442] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:14:44.474] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:14:44.505] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:14:44.506] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:14:44.506] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:14:44.506] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:14:44.506] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:14.462] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:15:14.520] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:15:14.586] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:14.586] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:14.587] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:14.587] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:14.587] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:21.490] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:21.490] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:21.490] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:21.491] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:21.491] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:21.540] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:21.540] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:21.540] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:21.540] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:21.541] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:29.140] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:15:29.140] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:15:29.976] [INFO] Platform -  client_configs.name  insurance-network  client_configs.profile  ./connection-profile/insurance-network.json
+[2020-01-04T00:15:29.976] [INFO] Platform - FabricUtils.createFabricClient 
+[2020-01-04T00:15:29.978] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:15:29.978] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:15:29.978] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:15:29.978] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:15:30.341] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:30.342] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:30.343] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:30.343] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:30.343] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:30.380] [INFO] Platform - FabricUtils.createDetachClient 
+[2020-01-04T00:15:30.383] [INFO] Platform - initializeListener, client_name, client  insurance-network { name: 'insurance-network',
+  profile: './connection-profile/insurance-network.json',
+  enableAuthentication: false }
+[2020-01-04T00:15:30.391] [INFO] main - Please open web browser to access ：http://localhost:8081/
+[2020-01-04T00:15:30.391] [INFO] main - pid is 6011
+[2020-01-04T00:15:30.576] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:15:30.576] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:15:31.651] [INFO] SyncPlatform - Sync process is started for the network : [first-network] and client : [insurance-network]
+[2020-01-04T00:15:31.655] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:15:31.655] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:15:31.656] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:15:31.656] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:15:32.124] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:32.126] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:32.127] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:32.128] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:32.128] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:32.176] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:15:32.228] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:32.229] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:32.229] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:32.230] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:32.230] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:32.289] [INFO] Sync - Synchronizer pid is 6030
+[2020-01-04T00:15:32.310] [INFO] SyncServices - block_row.blocknum  3
+[2020-01-04T00:15:33.646] [INFO] NetworkService - [ [ 'first-network', Map { 'insurance-network' => [Object] } ] ]
+[2020-01-04T00:15:33.797] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:33.797] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:33.798] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:33.798] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:33.798] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:33.830] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:33.830] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:33.830] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:33.831] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:33.831] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:35.150] [INFO] NetworkService - [ [ 'first-network', Map { 'insurance-network' => [Object] } ] ]
+[2020-01-04T00:15:35.271] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:35.271] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:35.272] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:35.272] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:35.273] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:35.312] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:35.312] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:35.313] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:35.313] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:35.314] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:36.414] [INFO] NetworkService - [ [ 'first-network', Map { 'insurance-network' => [Object] } ] ]
+[2020-01-04T00:15:36.543] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:36.543] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:36.543] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:36.544] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:36.544] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:36.575] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:36.576] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:36.576] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:36.576] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:36.577] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:42.366] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:42.366] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:42.366] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:42.367] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:42.367] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:42.424] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:42.424] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:42.425] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:42.425] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:42.425] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:15:44.508] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:15:44.542] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:15:44.647] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:15:44.647] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:15:44.647] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:15:44.648] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:15:44.648] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:16:02.285] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:16:02.325] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:16:02.355] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:16:02.356] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:16:02.357] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:16:02.357] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:16:02.357] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:16:14.529] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:16:14.566] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:16:14.654] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:16:14.654] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:16:14.654] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:16:14.655] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:16:14.656] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:16:32.322] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:16:32.366] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:16:32.420] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:16:32.421] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:16:32.421] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:16:32.421] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:16:32.421] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:16:32.950] [INFO] main - Received kill signal, shutting down gracefully
+[2020-01-04T00:16:32.966] [INFO] Sync - <<<<<<<<<<<<<<<<<<<<<<<<<< Closing client processor >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:16:32.974] [ERROR] FabricEvent - Block Event Error: ChannelEventHub has been shutdown
+[2020-01-04T00:16:47.598] [INFO] NetworkService - [ [ 'first-network', Map { 'insurance-network' => [Object] } ] ]
+[2020-01-04T00:16:58.066] [INFO] FabricGateway - user =  hppoc
+[2020-01-04T00:16:58.066] [INFO] FabricGateway - password =  password
+[2020-01-04T00:16:58.066] [INFO] FabricGateway - network =  first-network
+[2020-01-04T00:16:58.067] [INFO] UserService - first-network
+[2020-01-04T00:16:58.068] [INFO] UserService - Network: insurance-network enableAuthentication false
+[2020-01-04T00:16:58.266] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:16:58.266] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:16:58.266] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:16:58.266] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:16:58.267] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:16:58.305] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:16:58.306] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:16:58.306] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:16:58.306] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:16:58.306] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:17:02.353] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:17:02.386] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:17:02.446] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:17:02.446] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:17:02.446] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:17:02.446] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:17:02.447] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:17:32.376] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:17:32.396] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:17:32.447] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:17:32.448] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:17:32.448] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:17:32.449] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:17:32.449] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:17:58.659] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:17:58.660] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:17:58.660] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:17:58.660] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:17:58.661] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:17:58.718] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:17:58.719] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:17:58.719] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:17:58.720] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:17:58.720] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:18:02.391] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:18:02.432] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:18:02.521] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:18:02.521] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:18:02.522] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:18:02.522] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:18:02.522] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:18:32.421] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:18:32.455] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:18:32.528] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:18:32.528] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:18:32.528] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:18:32.528] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:18:32.529] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:18:58.649] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:18:58.650] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:18:58.650] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:18:58.650] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:18:58.650] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:18:58.700] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:18:58.700] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:18:58.701] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:18:58.701] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:18:58.702] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:19:02.446] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:19:02.479] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:19:02.523] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:19:02.523] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:19:02.523] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:19:02.523] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:19:02.523] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:19:32.465] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:19:32.475] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:19:32.508] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:19:32.509] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:19:32.509] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:19:32.510] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:19:32.510] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:19:58.613] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:19:58.614] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:19:58.614] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:19:58.614] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:19:58.615] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:19:58.669] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:19:58.669] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:19:58.669] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:19:58.669] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:19:58.670] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:20:02.470] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:20:02.531] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:20:02.616] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:20:02.616] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:20:02.616] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:20:02.617] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:20:02.617] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:20:32.519] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:20:32.548] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:20:32.582] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:20:32.583] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:20:32.583] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:20:32.583] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:20:32.583] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:20:58.644] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:20:58.644] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:20:58.646] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:20:58.646] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:20:58.647] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:20:58.681] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:20:58.681] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:20:58.681] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:20:58.682] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:20:58.682] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:21:02.543] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:21:02.576] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:21:02.664] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:21:02.664] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:21:02.665] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:21:02.665] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:21:02.665] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:21:32.567] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:21:32.625] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:21:32.665] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:21:32.665] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:21:32.665] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:21:32.666] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:21:32.666] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:21:58.648] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:21:58.648] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:21:58.648] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:21:58.649] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:21:58.649] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:21:58.708] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:21:58.709] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:21:58.709] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:21:58.709] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:21:58.709] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:22:02.618] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:22:02.648] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:22:02.779] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:22:02.780] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:22:02.780] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:22:02.780] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:22:02.780] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:22:32.638] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:22:32.673] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:22:32.743] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:22:32.743] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:22:32.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:22:32.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:22:32.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:22:58.556] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:22:58.557] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:22:58.557] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:22:58.558] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:22:58.558] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:22:58.614] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:22:58.614] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:22:58.614] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:22:58.615] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:22:58.615] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:23:02.658] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:23:02.720] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:23:02.799] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:23:02.799] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:23:02.799] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:23:02.800] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:23:02.800] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:23:32.699] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:23:32.714] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:23:32.756] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:23:32.757] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:23:32.757] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:23:32.758] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:23:32.758] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:23:58.644] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:23:58.645] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:23:58.645] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:23:58.645] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:23:58.646] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:23:58.683] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:23:58.683] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:23:58.683] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:23:58.684] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:23:58.684] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:24:02.710] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:24:02.716] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:24:02.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:24:02.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:24:02.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:24:02.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:24:02.744] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:24:32.715] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:24:32.732] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:24:32.804] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:24:32.805] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:24:32.805] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:24:32.805] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:24:32.805] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:24:58.629] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:24:58.630] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:24:58.630] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:24:58.630] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:24:58.630] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:24:58.672] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:24:58.672] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:24:58.672] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:24:58.672] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:24:58.672] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:25:02.725] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:25:02.757] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:25:02.805] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:25:02.805] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:25:02.805] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:25:02.806] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:25:02.806] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:25:32.752] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:25:32.788] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:25:32.866] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:25:32.866] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:25:32.866] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:25:32.867] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:25:32.867] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:25:58.613] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:25:58.613] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:25:58.613] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:25:58.614] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:25:58.614] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:25:58.665] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:25:58.665] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:25:58.665] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:25:58.666] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:25:58.666] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:26:02.777] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:26:02.799] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:26:02.829] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:26:02.829] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:26:02.830] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:26:02.830] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:26:02.830] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:26:32.793] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:26:32.822] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:26:32.898] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:26:32.898] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:26:32.898] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:26:32.899] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:26:32.899] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:26:58.643] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:26:58.644] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:26:58.644] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:26:58.645] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:26:58.646] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:26:58.686] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:26:58.687] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:26:58.687] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:26:58.687] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:26:58.690] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:27:02.813] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:27:02.851] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:27:02.896] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:27:02.896] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:27:02.896] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:27:02.896] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:27:02.896] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:27:32.847] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:27:32.863] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:27:32.895] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:27:32.895] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:27:32.895] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:27:32.895] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:27:32.895] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:27:58.623] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:27:58.624] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:27:58.624] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:27:58.624] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:27:58.624] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:27:58.666] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:27:58.666] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:27:58.667] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:27:58.667] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:27:58.667] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:28:02.859] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:28:02.866] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:28:02.899] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:28:02.899] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:28:02.900] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:28:02.900] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:28:02.900] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:28:32.865] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:28:32.893] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:28:32.973] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:28:32.974] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:28:32.974] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:28:32.974] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:28:32.974] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:28:58.575] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:28:58.575] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:28:58.575] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:28:58.576] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:28:58.577] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:28:58.653] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:28:58.657] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:28:58.657] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:28:58.658] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:28:58.658] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:29:02.883] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:29:02.914] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:29:02.963] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:29:02.963] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:29:02.963] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:29:02.964] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:29:02.964] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:29:23.163] [INFO] NetworkService - [ [ 'first-network', Map { 'insurance-network' => [Object] } ] ]
+[2020-01-04T00:29:23.311] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:29:23.311] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:29:23.311] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:29:23.313] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:29:23.313] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:29:23.353] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:29:23.354] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:29:23.354] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:29:23.355] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:29:23.355] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:29:32.904] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:29:32.944] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:29:33.009] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:29:33.009] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:29:33.010] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:29:33.010] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:29:33.010] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:30:02.766] [INFO] main - Received kill signal, shutting down gracefully
+[2020-01-04T00:30:02.768] [INFO] Sync - <<<<<<<<<<<<<<<<<<<<<<<<<< Closing client processor >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:30:02.774] [ERROR] FabricEvent - Block Event Error: ChannelEventHub has been shutdown
+[2020-01-04T00:30:02.934] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:30:02.961] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:30:03.010] [ERROR] Sync - <<<<<<<<<<<<<<<<<<<<<<<<<< Synchronizer Error >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:30:03.011] [ERROR] Sync - Error: Client was closed and is not queryable
+    at process.nextTick (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/pg/lib/client.js:535:25)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+[2020-01-04T00:30:03.013] [INFO] Sync - <<<<<<<<<<<<<<<<<<<<<<<<<< Closing client processor >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:34:37.718] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:34:37.718] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:34:38.530] [INFO] Platform -  client_configs.name  insurance-network  client_configs.profile  ./connection-profile/insurance-network.json
+[2020-01-04T00:34:38.530] [INFO] Platform - FabricUtils.createFabricClient 
+[2020-01-04T00:34:38.532] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:34:38.533] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:34:38.533] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/signcerts/Admin@bajajallianz.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk
+[2020-01-04T00:34:38.533] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:34:38.811] [ERROR] FabricClient - { Error: ENOENT: no such file or directory, open '/home/i0046/Videos/insurance-fabric/blockchain-explorer/app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.readFileSync (fs.js:551:33)
+    at readFileSync (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:442:20)
+    at getPEMfromConfig (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:424:13)
+    at NetworkConfig_1_0.getOrganization (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:274:18)
+    at NetworkConfig_1_0._getOrganizationForPeer (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:382:31)
+    at NetworkConfig_1_0._addPeersToChannel (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:365:29)
+    at NetworkConfig_1_0.getChannel (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/impl/NetworkConfig_1_0.js:160:10)
+    at Client.getChannel (/home/i0046/Videos/insurance-fabric/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/Client.js:343:36)
+    at FabricClient.initialize (/home/i0046/Videos/insurance-fabric/blockchain-explorer/app/platform/fabric/FabricClient.js:92:42)
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/i0046/Videos/insurance-fabric/blockchain-explorer/app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk' }
+[2020-01-04T00:34:38.846] [ERROR] FabricClient - Failed to initialize new channel:  insurancecommon
+[2020-01-04T00:34:38.847] [ERROR] main - <<<<<<<<<<<<<<<<<<<<<<<<<< Explorer Error >>>>>>>>>>>>>>>>>>>>>
+[2020-01-04T00:34:38.847] [ERROR] main - Error :  [ 'Invalid platform configuration, Please check the log' ]
+[2020-01-04T00:39:06.355] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:39:06.355] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:39:07.178] [INFO] Platform -  client_configs.name  insurance-network  client_configs.profile  ./connection-profile/insurance-network.json
+[2020-01-04T00:39:07.178] [INFO] Platform - FabricUtils.createFabricClient 
+[2020-01-04T00:39:07.179] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:39:07.180] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:39:07.180] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/signcerts/Admin@bajajallianz.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/keystore/699f17233fa69d22a08631d39e097d5111876a777e4f5a2787f76ade1f70c070_sk
+[2020-01-04T00:39:07.180] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:39:07.523] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:39:07.524] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:39:07.524] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:39:07.525] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:39:07.525] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:39:07.553] [INFO] Platform - FabricUtils.createDetachClient 
+[2020-01-04T00:39:07.555] [INFO] Platform - initializeListener, client_name, client  insurance-network { name: 'insurance-network',
+  profile: './connection-profile/insurance-network.json',
+  enableAuthentication: false }
+[2020-01-04T00:39:07.564] [INFO] main - Please open web browser to access ：http://localhost:8081/
+[2020-01-04T00:39:07.564] [INFO] main - pid is 8093
+[2020-01-04T00:39:07.713] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-04T00:39:07.713] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-04T00:39:08.614] [INFO] SyncPlatform - Sync process is started for the network : [first-network] and client : [insurance-network]
+[2020-01-04T00:39:08.616] [INFO] FabricConfig - config.client.tlsEnable  true
+[2020-01-04T00:39:08.616] [INFO] FabricGateway - peer0.bajaj.com
+[2020-01-04T00:39:08.616] [INFO] FabricGateway - ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/signcerts/Admin@bajajallianz.com-cert.pem  
+adminPrivateKeyPath  ./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/keystore/699f17233fa69d22a08631d39e097d5111876a777e4f5a2787f76ade1f70c070_sk
+[2020-01-04T00:39:08.616] [INFO] FabricConfig - FabricConfig, this.config.channels  insurancecommon
+[2020-01-04T00:39:08.959] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:39:08.960] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:39:08.961] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:39:08.961] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:39:08.962] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:39:08.994] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:39:09.033] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:39:09.034] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:39:09.034] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:39:09.034] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:39:09.035] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:39:09.087] [INFO] Sync - Synchronizer pid is 8112
+[2020-01-04T00:39:09.102] [INFO] SyncServices - block_row.blocknum  3
+[2020-01-04T00:39:19.202] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:39:19.203] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:39:19.204] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:39:19.205] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:39:19.206] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:39:19.317] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:39:19.318] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:39:19.318] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:39:19.318] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:39:19.318] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:39:22.853] [INFO] NetworkService - [ [ 'first-network', Map { 'insurance-network' => [Object] } ] ]
+[2020-01-04T00:39:23.025] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:39:23.025] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:39:23.026] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:39:23.026] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:39:23.026] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:39:23.071] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:39:23.071] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:39:23.072] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:39:23.072] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:39:23.072] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:39:39.082] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:39:39.148] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:39:39.234] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:39:39.234] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:39:39.234] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:39:39.234] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:39:39.235] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:40:09.136] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:40:09.158] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:40:09.239] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:40:09.239] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:40:09.239] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:40:09.239] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:40:09.240] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:40:23.489] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:40:23.489] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:40:23.489] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:40:23.490] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:40:23.490] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:40:23.536] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:40:23.538] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:40:23.538] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:40:23.539] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:40:23.539] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:40:39.151] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:40:39.196] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:40:39.248] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:40:39.248] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:40:39.248] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:40:39.248] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:40:39.249] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:41:09.184] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:41:09.206] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:41:09.249] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:41:09.249] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:41:09.250] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:41:09.250] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:41:09.250] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:41:23.473] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:41:23.474] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:41:23.474] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:41:23.474] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:41:23.475] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:41:23.510] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:41:23.510] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:41:23.510] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:41:23.510] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:41:23.511] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:41:39.202] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:41:39.211] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:41:39.246] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:41:39.247] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:41:39.247] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:41:39.247] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:41:39.247] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:42:09.207] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:42:09.222] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:42:09.256] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:42:09.256] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:42:09.257] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:42:09.257] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:42:09.257] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:42:23.376] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:42:23.377] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:42:23.377] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:42:23.377] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:42:23.378] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:42:23.435] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:42:23.436] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:42:23.436] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:42:23.436] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:42:23.437] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:42:39.218] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:42:39.226] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:42:39.254] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:42:39.254] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:42:39.255] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:42:39.255] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:42:39.255] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:43:09.223] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:43:09.231] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:43:09.257] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:43:09.258] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:43:09.258] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:43:09.258] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:43:09.258] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:43:23.483] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:43:23.484] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:43:23.484] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:43:23.485] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:43:23.485] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:43:23.514] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:43:23.514] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:43:23.514] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:43:23.515] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:43:23.515] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:43:39.229] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:43:39.240] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:43:39.268] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:43:39.268] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:43:39.268] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:43:39.268] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:43:39.269] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:44:09.238] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:44:09.244] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:44:09.271] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:44:09.271] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:44:09.271] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:44:09.271] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:44:09.272] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:44:23.464] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:44:23.464] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:44:23.464] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:44:23.465] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:44:23.465] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:44:23.498] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:44:23.498] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:44:23.498] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:44:23.499] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:44:23.499] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:44:39.242] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:44:39.251] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:44:39.275] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:44:39.275] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:44:39.276] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:44:39.276] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:44:39.276] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:45:09.249] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:45:09.254] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:45:09.278] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:45:09.278] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:45:09.278] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:45:09.278] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:45:09.279] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:45:23.476] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:45:23.477] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:45:23.477] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:45:23.477] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:45:23.478] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:45:23.504] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:45:23.504] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:45:23.504] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:45:23.505] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:45:23.505] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }
+[2020-01-04T00:45:39.252] [INFO] SyncPlatform - Updating the client network and other details to DB
+[2020-01-04T00:45:39.259] [INFO] SyncServices - SyncServices.synchNetworkConfigToDB client  insurance-network  channel_name  insurancecommon
+[2020-01-04T00:45:39.283] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer1.insurance', port: 7050 }
+[2020-01-04T00:45:39.283] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer2.insurance', port: 7050 }
+[2020-01-04T00:45:39.283] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer3.insurance', port: 7050 }
+[2020-01-04T00:45:39.283] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer4.insurance', port: 7050 }
+[2020-01-04T00:45:39.283] [INFO] FabricClient -  FabricClient.discover_results  endpoint  { host: 'orderer5.insurance', port: 7050 }

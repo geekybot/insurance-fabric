@@ -1,0 +1,80 @@
+{
+	"name": "insurance-network",
+	"version": "1.0.0",
+	"license": "Apache-2.0",
+	"client": {
+		"tlsEnable": true,
+		"adminUser": "admin",
+		"adminPassword": "adminpw",
+		"enableAuthentication": false,
+		"organization": "Org1",
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"insurancecommon": {
+			"peers": {
+				"peer0.bajaj.com": {}
+			},
+			"connection": {
+				"timeout": {
+					"peer": {
+						"endorser": "6000",
+						"eventHub": "6000",
+						"eventReg": "6000"
+					}
+				}
+			}
+		}
+	},
+	"organizations": {
+		"Bajaj": {
+			"mspid": "BajajMSP",
+			"fullpath": true,
+			"adminPrivateKey": {
+				"path": "./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/keystore/6397c9a25af08015ab9d8222dbedb7bda1303e048e358f9d86b30fa2277e1296_sk"
+			},
+			"signedCert": {
+				"path": "./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/users/Admin@bajaj.com/msp/signcerts/Admin@bajaj.com-cert.pem"
+			}
+		},
+		"BajajAllianz": {
+			"mspid": "BajajAllianzMSP",
+			"fullpath": true,
+			"adminPrivateKey": {
+				"path": "./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/keystore/699f17233fa69d22a08631d39e097d5111876a777e4f5a2787f76ade1f70c070_sk"
+			},
+			"signedCert": {
+				"path": "./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/users/Admin@bajajallianz.com/msp/signcerts/Admin@bajajallianz.com-cert.pem"
+			}
+		}
+	},
+	"peers": {
+		"peer0.bajaj.com": {
+			"tlsCACerts": {
+				"path": "./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajaj.com/peers/peer0.bajaj.com/tls/ca.crt"
+			},
+			"url": "grpcs://localhost:7051",
+			"eventUrl": "grpcs://localhost:7053",
+			"grpcOptions": {
+				"ssl-target-name-override": "peer0.bajaj.com"
+			}
+		},
+		"peer0.bajajallianz.com": {
+			"tlsCACerts": {
+				"path": "./app/platform/fabric/connection-profile/artifacts/channel/crypto-config/peerOrganizations/bajajallianz.com/peers/peer0.bajajallianz.com/tls/ca.crt"
+			},
+			"url": "grpcs://localhost:8051",
+			"eventUrl": "grpcs://localhost:8053",
+			"grpcOptions": {
+				"ssl-target-name-override": "peer0.bajajallianz.com"
+			}
+		}
+	}
+}

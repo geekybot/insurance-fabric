@@ -1,0 +1,10 @@
+{
+	"network-configs": {
+		"first-network": {
+			"name": "insurance-network",
+			"profile": "./connection-profile/insurance-network.json",
+			"enableAuthentication": false
+		}
+	},
+	"license": "Apache-2.0"
+}
