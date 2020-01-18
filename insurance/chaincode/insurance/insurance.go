@@ -29,9 +29,9 @@ type Admin struct {
 
 //invoice to roll out due payments
 type Invoice struct {
-	ObjType        string `json:"obj"`            // DocType
-	UserId         string `json:"userid"`         // user id to mamtch
-	InvoiceId      string `json:"invoiceid"`      // Inovoice id unique key
+	// ObjType        string `json:"obj"`            // DocType
+	UserId string `json:"userid"` // user id to mamtch
+	// InvoiceId      string `json:"invoiceid"`      // Inovoice id unique key
 	ForMonth       string `json:"formonth"`       //For which month invoice is generated
 	InsuranceId    string `json:"insuranceid"`    //Invoice raised against which invoice id
 	PremiumPayable int    `json:"premiumpayable"` // Payable premium due for this month
@@ -42,22 +42,22 @@ type Invoice struct {
 
 //user structure to register user on the platform
 type User struct {
-	ObjType     string   `json:"obj"`         // DocType
-	UserId      string   `json:"userid"`      // user id unique key
-	Name        string   `json:"name"`        //Name of the party
-	Email       string   `json:"email"`       //email of the user
-	MobileNo    string   `json:"mobileno"`    // Mobile no of the user
-	DOB         string   `json:"dob"`         // Date of Birth of the user
-	Gender      string   `json:"gender"`      // Gender of the user
-	Nationality string   `json:"nationality"` //Nationality of the user
-	Address     string   `json:"address"`     // address of the user
-	Insurances  []string `json:"insurances"`  //Insurances taken by the user
-	Invoices    []string `json:"invoices"`    //Invoice generated for the user
-	Payable     int      `json:"payable"`     // Amount payable
-	Paid        int      `json:"paid"`        // amount paid after disocunt
-	Bank1       string   `json:"bank1"`       // bank 1 details
-	Bank2       string   `json:"bank2"`       //bank 2 details
-	DualAcc     bool     `json:"dualAcc"`     // dual account enabled or not
+	ObjType     string    `json:"obj"`         // DocType
+	UserId      string    `json:"userid"`      // user id unique key
+	Name        string    `json:"name"`        //Name of the party
+	Email       string    `json:"email"`       //email of the user
+	MobileNo    string    `json:"mobileno"`    // Mobile no of the user
+	DOB         string    `json:"dob"`         // Date of Birth of the user
+	Gender      string    `json:"gender"`      // Gender of the user
+	Nationality string    `json:"nationality"` //Nationality of the user
+	Address     string    `json:"address"`     // address of the user
+	Insurances  []string  `json:"insurances"`  //Insurances taken by the user
+	Invoices    []Invoice `json:"invoices"`    //Invoice generated for the user
+	Payable     int       `json:"payable"`     // Amount payable
+	Paid        int       `json:"paid"`        // amount paid after disocunt
+	Bank1       string    `json:"bank1"`       // bank 1 details
+	Bank2       string    `json:"bank2"`       //bank 2 details
+	DualAcc     bool      `json:"dualAcc"`     // dual account enabled or not
 }
 
 // offer structure to rollout offers
@@ -88,6 +88,7 @@ type HealthInsurance struct {
 	Height        string `json:"height"`        // height of the user in x"y'
 	Weight        string `json:"weight"`        // Weight in kilograms (floor, no decimal point)
 	HealthRemarks string `json:"healthremarks"` // Pre existing healt condition if any
+	Premium       int    `json:"premium"`       // premium for each month
 	Active        bool   `json:"active"`        // Is offer active true, false
 	DualAcc       bool   `json:"dualAcc"`       // dual account enabled or not
 }
@@ -638,75 +639,84 @@ func (s *InsuranceManager) queryHealthInsuranceById(stub shim.ChaincodeStubInter
 }
 
 //InitiateBulkConsents creates a consent record in the ledger
-// func (s *InsuranceManager) createBulkConsent(stub shim.ChaincodeStubInterface) peer.Response {
-// 	_, args := stub.GetFunctionAndParameters()
-// 	if len(args) < 1 {
-// 		errKey = string(len(args))
-// 		errorDetails = "Invalid Number of Arguments"
-// 		jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
-// 		_consentLogger.Errorf("createBulkConsent: " + jsonResp)
-// 		return shim.Error(jsonResp)
-// 	}
-// 	var listConsent []Consent
-// 	err := json.Unmarshal([]byte(args[0]), &listConsent)
-// 	if err != nil {
-// 		errKey = args[0]
-// 		errorDetails = "Invalid JSON provided"
-// 		jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
-// 		_consentLogger.Errorf("createBulkConsent: " + jsonResp)
-// 		return shim.Error(jsonResp)
-// 	}
-// 	var rejectedConsents []string
-// 	_, creator := s.getInvokerIdentity(stub)
-// 	for i := 0; i < len(listConsent); i++ {
-// 		var consentToSave Consent
-// 		consentToSave = listConsent[i]
-// 		if recordBytes, _ := stub.GetState(consentToSave.ConsentId); len(recordBytes) > 0 {
-// 			rejectedConsents = append(rejectedConsents, consentToSave.ConsentId)
-// 			continue
-// 		}
-// 		consentToSave.ObjType = "Consent"
-// 		consentToSave.Creator = creator
-// 		consentToSave.UpdatedBy = creator
-// 		consentToSave.UpdateTs = consentToSave.CreateTS
-// 		consentJSON, _ := json.Marshal(consentToSave)
-// 		if isValid, err := IsValidConsentPresent(consentToSave); !isValid {
-// 			errKey = string(consentJSON)
-// 			errorDetails = string(err)
-// 			jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
-// 			_consentLogger.Errorf("createBulkConsent: " + jsonResp)
-// 			rejectedConsents = append(rejectedConsents, consentToSave.ConsentId)
-// 			continue
-// 		}
-// 		_consentLogger.Info("Saving Consent to the ledger with id----------", consentToSave.ConsentId)
-// 		err = stub.PutState(consentToSave.ConsentId, consentJSON)
-// 		if err != nil {
-// 			errKey = string(consentJSON)
-// 			errorDetails = "Unable to save with ConsentId -" + string(err.Error())
-// 			jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
-// 			_consentLogger.Errorf("createBulkConsent: " + jsonResp)
-// 			rejectedConsents = append(rejectedConsents, consentToSave.ConsentId)
-// 			continue
-// 		}
-// 		retErr := stub.SetEvent(_BulkCreateEvent, consentJSON)
-// 		if retErr != nil {
-// 			errKey = string(consentJSON)
-// 			errorDetails = "Event not generated for event : BULK_CREATE- " + string(retErr.Error())
-// 			jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
-// 			_consentLogger.Errorf("createBulkConsent: " + jsonResp)
-// 			rejectedConsents = append(rejectedConsents, consentToSave.ConsentId)
-// 			continue
-// 		}
-// 	}
-// 	resultData := map[string]interface{}{
-// 		"trxnID":     stub.GetTxID(),
-// 		"consents_f": rejectedConsents,
-// 		"message":    "Consents Registered Successfully",
-// 		"status":     "true",
-// 	}
-// 	respJSON, _ := json.Marshal(resultData)
-// 	return shim.Success(respJSON)
-// }
+func (s *InsuranceManager) raiseBulkInvoice(stub shim.ChaincodeStubInterface) peer.Response {
+	_, args := stub.GetFunctionAndParameters()
+	if len(args) < 1 {
+		errKey = string(len(args))
+		errorDetails = "Invalid Number of Arguments"
+		jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
+		_consentLogger.Errorf("createBulkConsent: " + jsonResp)
+		return shim.Error(jsonResp)
+	}
+	type tempInvoice struct {
+		UserId   []string `json:"userid"`   // user id to mamtch
+		ForMonth string   `json:"formonth"` //For which month invoice is generated
+	}
+	var listUserId tempInvoice
+	err := json.Unmarshal([]byte(args[0]), &listUserId)
+	if err != nil {
+		errKey = args[0]
+		errorDetails = "Invalid JSON provided"
+		jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
+		_consentLogger.Errorf("raiseBulkInvoice: " + jsonResp)
+		return shim.Error(jsonResp)
+	}
+	var rejectedUsers []string
+	// _, creator := s.getInvokerIdentity(stub)
+	for i := 0; i < len(listUserId.UserId); i++ {
+		var userIdInvoices string
+		userIdInvoices = listUserId.UserId[i]
+		fmt.Println("useridinvoice is ", userIdInvoices)
+		userRecord, retErr := stub.GetState(userIdInvoices)
+		if retErr != nil {
+			rejectedUsers = append(rejectedUsers, userIdInvoices)
+			jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
+			_consentLogger.Errorf("raiseBulkInvoices: " + jsonResp)
+			continue
+		} else if userRecord == nil {
+			rejectedUsers = append(rejectedUsers, userIdInvoices)
+			jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
+			_consentLogger.Errorf("raiseBulkInvoices: " + jsonResp)
+			continue
+		}
+		var existingUser User
+		err = json.Unmarshal([]byte(userRecord), &existingUser)
+		if len(existingUser.Insurances) < 1 {
+			rejectedUsers = append(rejectedUsers, userIdInvoices)
+			jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
+			_consentLogger.Errorf("raiseBulkInvoices: " + jsonResp)
+			continue
+		}
+		for j := 0; j < len(existingUser.Insurances); j++ {
+			var invoiceToSave Invoice
+			insuranceRecord, _ := stub.GetState(existingUser.Insurances[j])
+			var existingInsurance HealthInsurance
+			err = json.Unmarshal([]byte(insuranceRecord), &existingInsurance)
+			invoiceToSave.UserId = userIdInvoices
+			invoiceToSave.ForMonth = listUserId.ForMonth
+			invoiceToSave.InsuranceId = existingInsurance.InsuranceId
+			invoiceToSave.PremiumPayable = existingInsurance.Premium
+			existingUser.Invoices = append(existingUser.Invoices, invoiceToSave)
+		}
+		userJSON, _ := json.Marshal(existingUser)
+		err = stub.PutState(existingUser.UserId, userJSON)
+		if err != nil {
+			errKey = string(userJSON)
+			errorDetails = "Unable to save User with UserId -" + string(err.Error())
+			jsonResp = "{\"Data\":\"" + errKey + "\",\"ErrorDetails\":\"" + errorDetails + "\"}"
+			_consentLogger.Errorf("Update bank details: " + jsonResp)
+			return shim.Error(jsonResp)
+		}
+	}
+	resultData := map[string]interface{}{
+		"trxnID":     stub.GetTxID(),
+		"consents_f": rejectedUsers,
+		"message":    "Invoice raised Successfully",
+		"status":     "true",
+	}
+	respJSON, _ := json.Marshal(resultData)
+	return shim.Success(respJSON)
+}
 
 // getDataByPagination will query the ledger on the selector input, and display using the pagination
 func (s *InsuranceManager) getDataByPagination(stub shim.ChaincodeStubInterface) peer.Response {
