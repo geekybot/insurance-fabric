@@ -39,8 +39,8 @@ func (sc *SmartContract) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 		response = sc.insurance.buyHealthInsurance(stub)
 	case "raiseinvoice":
 		response = sc.insurance.raiseBulkInvoice(stub)
-	// case "hcid":
-	// 	response = sc.insurance.getHistoryByinsuranceId(stub)
+	case "paypremium":
+		response = sc.insurance.payPremium(stub)
 	case "datapage":
 		response = sc.insurance.getDataByPagination(stub)
 	default:
